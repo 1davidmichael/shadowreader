@@ -34,7 +34,8 @@ install:
   # Download necessary config file from the correct repository branch.
   # eg. If building branch "test123" for repo edmunds/shadowreader
   #     then it will download https://raw.githubusercontent.com/edmunds/shadowreader/test123/shadowreader/shadowreader.example.yml
-  - wget https://raw.githubusercontent.com/$REPO_SLUG/$BRANCH/shadowreader/shadowreader.example.yml --output-document=shadowreader.yml
+  # - wget https://raw.githubusercontent.com/$REPO_SLUG/$BRANCH/shadowreader/shadowreader.example.yml --output-document=shadowreader.yml
+  - cp shadowreader/shadowreader.example.yml shadowreader/shadowreader.yml
 
 script:
   - pytest shadowreader/tests/unit
